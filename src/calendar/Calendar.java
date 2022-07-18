@@ -12,11 +12,16 @@ public class Calendar {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
-		System.out.println("수를 입력하세요: ");
-		int month = scanner.nextInt();
+
+		System.out.println("반복횟수를 입력하세요: ");
+		int repeat = scanner.nextInt();
 		
-		
-		System.out.printf("해당 월은 %d일로 구성됩니다.", cal.getLastDayOfMonth(month));
+		for (int i = 0; i < repeat; i++) {
+			System.out.println("수를 입력하세요: ");
+			int month = scanner.nextInt();
+			System.out.printf("해당 월은 %d일로 구성됩니다.\n", cal.getLastDayOfMonth(month));			
+		}
+		System.out.println("Complete");
 		scanner.close();
 	}
 }
